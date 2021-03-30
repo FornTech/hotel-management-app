@@ -1,8 +1,18 @@
-<div style="text-align: center">
-  <h1>Welcome to hma-frontend!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+
+<!-- main content start-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <app-sidenav-list (CloseSidenavNavigation)="sidenav.toggle()"></app-sidenav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header (SideNavigationToggle)="sidenav.toggle()"></app-header>
+    <app-navtabs></app-navtabs>
+  </mat-sidenav-content>
+
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
+
+
+
+

@@ -8,6 +8,11 @@ import { Message } from '@hotel-management-app/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title = 'Hotel Management App';
+
+  hidden = false;
+
+  toggleBadgeVisibility(): boolean {
+    return this.hidden = !this.hidden;
+  }
 }
