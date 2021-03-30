@@ -51,7 +51,10 @@
               "apps/hma-frontend/src/favicon.ico",
               "apps/hma-frontend/src/assets"
             ],
-            "styles": ["apps/hma-frontend/src/styles.scss"],
+            "styles": [
+              "apps/hma-frontend/src/styles.scss",
+              "apps/hma-frontend/src/forntech.scss"
+            ],
             "scripts": []
           },
           "configurations": {
